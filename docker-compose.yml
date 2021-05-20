@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: taltech-app
+    ports:
+      - 3002:3000
+    environment:
+      - ENVIRONMENT=docker
+      - DB_HOST=mysql
+      - DB_DATABASE=taltechdb
+      - DB_USER=root
+      - DB_PASSWORD=password
+    command: npm run dev
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    container_name: taltech-db
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
