@@ -39,7 +39,7 @@ after both containers are up and running, execute this to setup database:
 docker exec -it taltech-app npm run db-setup
 ```
 
-that's it! App will be running at port `3002`
+that's it! App will be running at `localhost:3002`
 
 ### option 2: running the app locally
 
@@ -67,7 +67,7 @@ after this is done, let's run the app:
 npm run dev
 ```
 
-voila! App will be running at post `3000`
+voila! App will be running at `localhost:3000`
 
 ## Useful commands
 
